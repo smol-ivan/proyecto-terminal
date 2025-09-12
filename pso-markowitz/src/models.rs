@@ -1,3 +1,5 @@
+pub type Activos = Vec<Activo>;
+
 pub struct Activo {
     pub id: usize,
     pub mean_return: f64,

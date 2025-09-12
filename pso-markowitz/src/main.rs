@@ -1,16 +1,17 @@
+mod models;
 mod utils;
 
+use crate::models::*;
 use crate::utils::*;
 use std::env;
 
 fn main() {
-    println!("Hello, world!");
     let args: Vec<String> = env::args().collect();
 
-    if args.len() < 4 {
+    if args.len() < 2 {
         eprintln!("Uso: ${} <filepath to test>", args[0]);
         return;
     }
 
-    let filepath = &args[1];
+    obtener_datos_prueba(&args[1]);
 }
